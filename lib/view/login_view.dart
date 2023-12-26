@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:mvvm/res/components/round_button.dart';
 import 'package:mvvm/utils/routes/routes_name.dart';
 import 'package:mvvm/utils/utils.dart';
-import 'package:mvvm/view/home_screen.dart';
 import 'package:mvvm/view_model/auth_view_model.dart';
 import 'package:provider/provider.dart';
+import 'package:http/http.dart' as http;
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);
 

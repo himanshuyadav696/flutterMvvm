@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:mvvm/screens/LoginScreen.dart';
-import 'package:mvvm/utils/routes/routes_name.dart';
-
-import '../screens/HomeScreen.dart';
+import 'package:mvvm/screens/HomeScreen.dart';
 class Splash extends StatefulWidget{
-  const Splash({Key? key}) : super(key: key);
+  const Splash({super.key});
   @override
   _SplashState createState() => _SplashState();
 }
@@ -17,7 +14,8 @@ class _SplashState extends State<Splash>{
   }
   _navigateToLogin() async{
     await Future.delayed(const Duration(milliseconds: 1500),(){});
-    Navigator.pushNamed(context, RoutesName.login);
+    Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>const HomeScreen()));
+
   }
 
   @override
